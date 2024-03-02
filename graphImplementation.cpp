@@ -5,6 +5,7 @@ class graph{
     public:
     unordered_map<int,list<int>> adj;
     void addNode(int u,int v,int direction){
+        //undirected graph
         adj[u].push_back(v);
         if(direction==0){
             adj[v].push_back(u);

@@ -45,7 +45,7 @@ void levelOrderTraversal(node* root){
         /// space dene ke liye
         if(temp == NULL){
             cout<<endl;
-            //change line after end of level
+            //change line after end of level current level
             if(!q.empty()){
                 q.push(NULL);
             }
