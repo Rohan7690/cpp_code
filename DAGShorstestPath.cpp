@@ -23,7 +23,7 @@ class graph{
 
     void dfs(int src,stack<int> &s,unordered_map<int,bool> &vis){
         vis[src] = 1;
-        for(auto neighbor:adj){
+        for(auto neighbor:adj[src]){
             if(!vis[neighbor.first]){
                 dfs(neighbor.first,s,vis);
             }
@@ -37,7 +37,7 @@ class graph{
         while(!s.empty()){
             int top = s.top();
             s.pop();
-            if(dis[top]!=INT_MAX)
+            if(dis[top] != INT_MAX)
             for(auto i:adj[top]){
                 int v = i.first;
                 int wt = i.second;
@@ -46,6 +46,7 @@ class graph{
                 }
             }
         }
+        
     }
 
 };
